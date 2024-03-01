@@ -46,6 +46,8 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script src="./static/js/script.js"></script>
+
 </head>
 <body>
 
@@ -140,24 +142,18 @@
 </section>
 
 
-
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/selected_samples_2.png" alt="MY ALT TEXT"/>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/selected_samples_2.png" alt="MY ALT TEXT"/>
-      </div>
+<section class="section">
+  <div class="carousel">
+    <div class="carousel-images">
+      <img src="selected_samples_2.png">
+      <img src="selected_samples_2.png">
+      <img src="selected_samples_2.png">
+      <!-- Add more images as needed -->
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
   </div>
-</div>
-</div>
 </section>
-
 
 
 
