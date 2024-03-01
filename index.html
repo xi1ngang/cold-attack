@@ -106,26 +106,33 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns">
-      <div class="column is-four-fifths">
-        <p style="text-align: left;">
-          In this work, we present COLD-Attack, a novel attack mechanism that generates controllable 
-          adversarial prompts to jailbreak large language models (LLMs).
-        </p>
-      </div>
+    <!-- Summary of the work -->
+    <div class="content">
+      <p>
+        In this work, we present COLD-Attack, a novel attack mechanism that generates controllable adversarial prompts to jailbreak large language models (LLMs).
+      </p>
+    </div>
+    
+    <!-- Large plot display -->
+    <div style="text-align: center; margin-top: 20px;"> <!-- Center align the image container -->
+      <img src="./static/images/COLD_attack_diagram.png"
+           style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;" <!-- Make the image responsive and centered -->
+           alt="COLD-Attack mechanism diagram">
+    </div>
+    
+    <!-- Explanation of the diagram -->
+    <div class="content" style="margin-top: 20px;">
+      <p>As illustrated in the above diagram, our COLD-Attack framework includes three main steps:</p>
+      <ol>
+        <li><strong>Energy function formulation:</strong> Specify energy functions properly to capture the attack constraints such as fluency, stealthiness, sentiment, and left-right-coherence.</li>
+        <li><strong>Langevin dynamics sampling:</strong> Run Langevin dynamics recursively for specific steps to obtain a good energy-based model governing the adversarial attack logits.</li>
+        <li><strong>Decoding process:</strong> Leverage an LLM-guided decoding process to convert the continuous logits into discrete text attacks.</li>
+      </ol>
+      <p>
     </div>
   </div>
 </section>
-  
-<section class="section">
-  <!-- Image centered and made larger -->
-  <div style="text-align: center;"> <!-- Center align the image container -->
-    <img src="./static/images/COLD_attack_diagram.png"
-         style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;" <!-- Make the image responsive and centered -->
-         />
-  </div>
-  <br/>
-</section>
+
 
 
 
