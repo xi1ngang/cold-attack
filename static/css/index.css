@@ -155,3 +155,41 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+
+
+.carousel {
+  position: relative;
+  max-width: 600px; /* Maximum width of the carousel */
+  margin: auto; /* Center the carousel */
+  overflow: hidden; /* Hide the overflow */
+}
+
+.carousel-images img {
+  width: 100%; /* Make images fill the container */
+  display: none; /* Hide images by default */
+}
+
+.carousel-images img.active {
+  display: block; /* Only show the active image */
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
