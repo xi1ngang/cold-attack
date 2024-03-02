@@ -183,38 +183,24 @@
           To ensure the generated adversarial prompts meet specific criteria, we apply controls over various features, including sentiment and vocabulary. We evaluate how well these controls work using a metric called <strong>Succ</strong>, which represents the percentage of samples that successfully adhere to our set requirements. Additionally, a range of NLP-related evaluation metrics including <strong>BERTScore</strong>, <strong>BLEU</strong>, and <strong>ROUGE</strong> are applied to evaluate the quality of generated controllable attacks.      
       </p>
       <h3>Fluent suffix attack</h3>
-      <table border="1">
-    <tr>
-        <th>Models</th>
-        <th>ASR ↑</th>
-        <th>ASR-G ↑</th>
-        <th>PPL ↓</th>
-    </tr>
-    <tr>
-        <td>Vicuna</td>
-        <td>100.0</td>
-        <td>86.00</td>
-        <td>32.96</td>
-    </tr>
-    <tr>
-        <td>Guanaco</td>
-        <td>96.00</td>
-        <td>84.00</td>
-        <td>30.55</td>
-    </tr>
-    <tr>
-        <td>Mistral</td>
-        <td>92.00</td>
-        <td>90.00</td>
-        <td>26.24</td>
-    </tr>
-    <tr>
-        <td>Llama2</td>
-        <td>92.00</td>
-        <td>66.00</td>
-        <td>24.83</td>
-    </tr>
-</table>
+      <div style="text-align: center; margin-top: 20px;"> <!-- Center align the image container -->
+      <img src="./static/images/t1.png"
+           style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;" <!-- Make the image responsive and centered -->
+      </div>
+      <h3>Paraphrase attack</h3>
+      <div style="text-align: center; margin-top: 20px;"> <!-- Center align the image container -->
+      <img src="./static/images/t2.png"
+           style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;" <!-- Make the image responsive and centered -->
+      </div>
+      <h3>Left-right-coherence control</h3>
+      <div style="text-align: center; margin-top: 20px;"> <!-- Center align the image container -->
+      <img src="./static/images/t3.png"
+           style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;" <!-- Make the image responsive and centered -->
+      </div>
+
+
+<p>Please see more detailed evaluation results and discussions in our paper.</p>
+
     </div>
   </div>
 </section>
