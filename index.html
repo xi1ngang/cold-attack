@@ -173,35 +173,35 @@
     <!-- Summary of the work -->
     <div class="content">
       <h3>Experiment Results</h3>
-      <p>
-      We evaluate the performance of COLD-Attack on four popular white-box LLMs: Vicuna-7b-v1.5 (Vicuna), Llama-2-7b-Chat-hf (Llama2), Guanaco-7b (Guanaco), and Mistral-7b-Instruct-v0.2 (Mistral). In addition, we use the following three main evaluation metrics:
-        <ul>
-          <li><strong>Attack Successful Rate (ASR):</strong>: the percentage of instructions that elicit corresponding harmful outputs using sub-string matching method.
-          <li><strong>GPT-4 based ASR (ASR-G):</strong>: We develop a prompt template and utilize GPT-4 to assess whether a response accurately fulfills the malicious instruction. Based on our observations, ASR-G has shown higher correlation with human annotations, providing a more reliable measure of attack effectiveness.
-          <li><strong>Perplexity (PPL):</strong>We use PPL to evaluate the fluency of the generated prompts and use Vicuna-7b to do the PPL calculation.
-        </ul>
-          To ensure the generated adversarial prompts meet specific criteria, we apply controls over various features, including sentiment and vocabulary. We evaluate how well these controls work using a metric called <strong>Succ</strong>, which represents the percentage of samples that successfully adhere to our set requirements. Additionally, a range of NLP-related evaluation metrics including <strong>BERTScore</strong>, <strong>BLEU</strong>, and <strong>ROUGE</strong> are applied to evaluate the quality of generated controllable attacks.      
-      </p>
       <strong>Fluent suffix attack</strong>
       <div style="text-align: center; margin-top: 20px;"> <!-- Center align the image container -->
       <img src="./static/images/t1.png"
            style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;" <!-- Make the image responsive and centered -->
+      <ul>
+        <li> COLD-Attack achieves comparable ASRs compared to the existing baseline methods such as GCG, AutoDAN-zhu, and AutoDAN-liu.
+        <li> COLD-Attack stand out by achieving better stealthiness with lower PPL compared to all other methods.
+      </ul>
       </div>
       <strong>Paraphrase attack</strong>
       <div style="text-align: center; margin-top: 20px;"> <!-- Center align the image container -->
       <img src="./static/images/t2.png"
            style="width: 70%; max-width: 800px; height: auto; display: block; margin: 0 auto;" <!-- Make the image responsive and centered -->
+      <ul>
+        <li> COLD-Attack approach produces high-quality rephrasing.
+        <li> COLD-Attack significantly outperforms GPT-4-based rephrased queries in terms of ASR.
+        <li> Our paraphrase attack with sentiment control reveals that different LLMs exhibit varying susceptibilities to different sentiments.
+      </ul>
       </div>
-      <strong>Left-right-coherence control</strong>
+      <strong>Attack with left-right-coherence control</strong>
       <div style="text-align: center; margin-top: 20px;"> <!-- Center align the image container -->
       <img src="./static/images/t3.png"
            style="width: 80%; max-width: 800px; height: auto; display: block; margin: 0 auto;" <!-- Make the image responsive and centered -->
+      <ul>
+        <li> COLD-Attack can effectively generate stealthy attacks that satisfy the left-right-coherence requirement.
+        <li> COLD-Attack also allows the use of separate prompts to pose output constraints on the target LLMs.
+      </ul>
       </div>
-
-
-<p>Please see more detailed evaluation results and discussions in our paper.</p>
-
-    </div>
+   </div>
   </div>
 </section>
 
