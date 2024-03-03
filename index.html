@@ -18,7 +18,10 @@
     gtag('js', new Date());
 
     gtag('config', 'G-PYVRSFMDRL');
+  
   </script>
+
+    
   <link rel="icon" type="image/x-icon" href="./static/images/cold_attack_gpt4.webp">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -43,8 +46,55 @@
         width: 80%;       /* Set to your desired width */
         margin: 0 auto;   /* Center the carousel horizontally */
     }
-  </style>
 
+  </style>
+<style>
+  .slider-container {
+    position: relative;
+    width: 100%;
+    max-width:800px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .slider-wrapper {
+    display: flex;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .slider-item {
+  display: inline-block; /* 或者使用 display: inline-flex; */
+  line-height: 0; /* 这可以移除图片底部可能出现的空白间隙 */
+}
+
+.slider-item img {
+  display: block;
+  width: auto; /* 或者使用100% 如果你想让图片填满容器 */
+  max-width: 50%; /* 保证图片不会超过其父容器的宽度 */
+  height: auto; /* 保持图片原有的纵横比 */
+}
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .left-btn {
+    left: 10px;
+  }
+  
+  .right-btn {
+    right: 10px;
+  }
+  
+  </style>
 </head>
 <body>
 
@@ -170,22 +220,25 @@
     </div>
     
     <!-- Large plot display -->
-    <div style="text-align: center; margin-top: 20px;"> <!-- Center align the image container -->
-      <img src="./static/images/ex1.png"
-           style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;" <!-- Make the image responsive and centered -->
+    <div class="slider-container">
+      <div class="slider-wrapper">
+        <div class="slider-item">
+          <img src="./static/images/ex1.png" alt="Image 1">
+        </div>
+        <div class="slider-item">
+          <img src="./static/images/ex2.png" alt="Image 2">  
+        </div>
+        <div class="slider-item">
+          <img src="./static/images/ex3.png" alt="Image 3">
+        </div>
+        <div class="slider-item">
+          <img src="./static/images/ex4.png" alt="Image 4">
+        </div>
+      </div>
+      <button class="left-btn">Left</button>
+      <button class="right-btn">Right</button>
     </div>
-    <div style="text-align: center; margin-top: 20px;"> <!-- Center align the image container -->
-      <img src="./static/images/ex2.png"
-           style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;" <!-- Make the image responsive and centered -->
-    </div>
-    <div style="text-align: center; margin-top: 20px;"> <!-- Center align the image container -->
-      <img src="./static/images/ex3.png"
-           style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;" <!-- Make the image responsive and centered -->
-    </div>
-    <div style="text-align: center; margin-top: 20px;"> <!-- Center align the image container -->
-      <img src="./static/images/ex4.png"
-           style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;" <!-- Make the image responsive and centered -->
-    </div>
+
   </div>
 </section>
 
@@ -265,6 +318,30 @@
     </div>
   </div>
 </footer>
+<script>
+  const sliderWrapper = document.querySelector('.slider-wrapper');
+  const sliderItems = document.querySelectorAll('.slider-item');
+  let currentIndex = 0;
+
+  document.querySelector('.left-btn').addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSliderPosition();
+    }
+  });
+
+  document.querySelector('.right-btn').addEventListener('click', () => {
+    if (currentIndex < sliderItems.length - 1) {
+      currentIndex++;
+      updateSliderPosition();
+    }
+  });
+
+  function updateSliderPosition() {
+    const newTransformValue = -currentIndex * 200; // Assuming each slide is 100% of the container width
+    sliderWrapper.style.transform = `translateX(${newTransformValue}%)`;
+  }
+</script>
 
 </body>
 </html>
