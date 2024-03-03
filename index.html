@@ -63,15 +63,19 @@
   }
   
   .slider-item {
-  display: inline-block; /* 或者使用 display: inline-flex; */
-  line-height: 0; /* 这可以移除图片底部可能出现的空白间隙 */
+  width: 100%; /* 让每个 .slider-item 填满 .slider-wrapper */
+  height: 100%; /* 让每个 .slider-item 填满 .slider-wrapper */
+  display: flex; /* 使用 Flexbox 布局来居中内容 */
+  justify-content: center; /* 水平居中内容 */
+  align-items: center; /* 垂直居中内容 */
+  flex-shrink: 0; /* 防止 flex 子元素缩小 */
 }
 
+/* 如果 .slider-item 包含图片 */
 .slider-item img {
-  display: block;
-  width: auto; /* 或者使用100% 如果你想让图片填满容器 */
-  max-width: 50%; /* 保证图片不会超过其父容器的宽度 */
-  height: auto; /* 保持图片原有的纵横比 */
+  width: 100%; /* 宽度填满 .slider-item */
+  height: auto; /* 高度自适应以保持图片比例 */
+  object-fit: cover; /* 覆盖整个区域，可能会剪裁某些部分 */
 }
   
   button {
@@ -81,7 +85,7 @@
     background-color: #333;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 10px;
     cursor: pointer;
     z-index: 2;
   }
@@ -235,8 +239,8 @@
           <img src="./static/images/ex4.png" alt="Image 4">
         </div>
       </div>
-      <button class="left-btn">Left</button>
-      <button class="right-btn">Right</button>
+      <button class="left-btn"><</button>
+      <button class="right-btn"> > </button>
     </div>
 
   </div>
@@ -338,7 +342,7 @@
   });
 
   function updateSliderPosition() {
-    const newTransformValue = -currentIndex * 200; // Assuming each slide is 100% of the container width
+    const newTransformValue = -currentIndex * 100; // Assuming each slide is 100% of the container width
     sliderWrapper.style.transform = `translateX(${newTransformValue}%)`;
   }
 </script>
