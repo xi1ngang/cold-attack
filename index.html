@@ -39,6 +39,68 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script src="static/js/bulma-carousel.js"></script>
+
+  <style>
+    .results-carousel {
+        width: 80%;       /* Set to your desired width */
+        margin: 0 auto;   /* Center the carousel horizontally */
+    }
+
+  </style>
+<style>
+  .slider-container {
+    position: relative;
+    width: 100%;
+    max-width:800px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .slider-wrapper {
+    display: flex;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .slider-item {
+  width: 100%; /* 让每个 .slider-item 填满 .slider-wrapper */
+  height: 100%; /* 让每个 .slider-item 填满 .slider-wrapper */
+  display: flex; /* 使用 Flexbox 布局来居中内容 */
+  justify-content: center; /* 水平居中内容 */
+  align-items: center; /* 垂直居中内容 */
+  flex-shrink: 0; /* 防止 flex 子元素缩小 */
+}
+
+/* 如果 .slider-item 包含图片 */
+.slider-item img {
+  width: 100%; /* 宽度填满 .slider-item */
+  height: auto; /* 高度自适应以保持图片比例 */
+  object-fit: cover; /* 覆盖整个区域，可能会剪裁某些部分 */
+}
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .left-btn {
+    left: 10px;
+  }
+  
+  .right-btn {
+    right: 10px;
+  }
+  
+  </style>
+
+  
 </head>
 <body>
 
