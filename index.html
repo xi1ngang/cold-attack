@@ -265,7 +265,7 @@ The controllability enabled by COLD-Attack leads to diverse new jailbreak scenar
       <h3>Experiment Results</h3>
       <strong>Attack with Continuation Constraint</strong>
       <div style="text-align: center; margin-top: 20px;"> <!-- Center align the image container -->
-      <img src="./static/images/t1.png"
+      <img src="./static/images/setting1_1.png"
            style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;" <!-- Make the image responsive and centered -->
         </div>
         <div class="content has-text-justified">
@@ -273,29 +273,48 @@ The controllability enabled by COLD-Attack leads to diverse new jailbreak scenar
           <li> COLD-Attack achieves comparable ASRs compared to the existing baseline methods such as GCG, AutoDAN-zhu, and AutoDAN-liu.
           <li> COLD-Attack stands out by achieving better stealthiness with lower PPL compared to all other methods.
         </ul>
+        <div style="text-align: center; margin-top: 20px;"> <!-- Center align the image container -->
+      <img src="./static/images/setting1_2.png"
+           style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;" <!-- Make the image responsive and centered -->
+        </div>
+        <div class="content has-text-justified">
+        <ul>
+          <li> COLD-Attack can generate more diverse adversarial prompt compared to the baseline methods AutoDAN-zhu and AutoDAN-liu.
+          <li> COLD-Attack is much faster than GCG and AutoDAN-zhu.
+        </ul>
        </div>
      
       <strong>Attack with Paraphrasing Constraint</strong>
       <div style="text-align: center; margin-top: 20px;"> <!-- Center align the image container -->
-      <img src="./static/images/t2.png"
+      <img src="./static/images/setting2.png"
            style="width: 50%; max-width: 800px; height: auto; display: block; margin: 0 auto;" <!-- Make the image responsive and centered -->
       </div>
         <div class="content has-text-justified">
         <ul>
           <li> COLD-Attack produces high-quality rephrasing.
-          <li> COLD-Attack significantly outperforms GPT-4-based rephrased queries in terms of ASR.
+          <li> COLD-Attack significantly outperforms other three paraphrasing baselines in terms of ASR.
           <li> Our paraphrase attack with sentiment control reveals that different LLMs exhibit varying susceptibilities to different sentiments.
         </ul>
        </div>
       <strong>Attack with Position Constraint</strong>
       <div style="text-align: center; margin-top: 20px;"> <!-- Center align the image container -->
-      <img src="./static/images/t3.png"
+      <img src="./static/images/setting3_1.png"
            style="width: 70%; max-width: 800px; height: auto; display: block; margin: 0 auto;" <!-- Make the image responsive and centered -->
         </div>
          <div class="content has-text-justified">
         <ul>
-          <li> COLD-Attack can effectively generate stealthy attacks that satisfy the left-right-coherence requirement.
+          <li> COLD-Attack can effectively generate stealthy attacks that satisfy the position constraint.
           <li> COLD-Attack also allows the use of separate prompts to pose output constraints on the target LLMs.
+        </ul>
+      </p>
+      </div>
+                <div style="text-align: center; margin-top: 20px;"> <!-- Center align the image container -->
+      <img src="./static/images/setting3_2.png"
+           style="width: 70%; max-width: 800px; height: auto; display: block; margin: 0 auto;" <!-- Make the image responsive and centered -->
+        </div>
+         <div class="content has-text-justified">
+        <ul>
+          <li> COLD-Attack outperforms under the position constraint setting compared to other baseline methods including AutoDAN-Zhu and GCG.
         </ul>
       </p>
       </div>
